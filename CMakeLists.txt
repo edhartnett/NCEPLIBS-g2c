@@ -90,8 +90,8 @@ set(DATA_FILE noaa_grib2_params.csv)
 configure_file(src/noaa_grib2_params.csv ${CMAKE_CURRENT_BINARY_DIR}/${DATA_FILE} COPYONLY)
 
 # Remember the location of the data file.
-add_compile_definitions(DATADIR="${CMAKE_CURRENT_BINARY_DIR}")
-add_compile_definitions(INSTALL_DATADIR="${CMAKE_INSTALL_FULL_LIBDIR}")
+add_compile_definitions(G2C_DATADIR="${CMAKE_CURRENT_BINARY_DIR}")
+add_compile_definitions(INSTALL_G2C_DATADIR="${CMAKE_INSTALL_FULL_LIBDIR}")
 
 # Find libxml2.
 find_package(LibXml2 2.9.0 REQUIRED)
